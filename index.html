@@ -6,19 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
+
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,9 +29,270 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">9:00 AM</li>
+        <li class="list-group-item col-6 change timeColumn" id="09">
+          <input
+            id="nineIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="nineBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">10:00 AM</li>
+        <li class="list-group-item col-6 change timeColumn" id="10">
+          <input
+            id="tenIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="tenBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">11:00 AM</li>
+        <li class="list-group-item col-6 change timeColumn" id="11">
+          <input
+            id="elevenIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="elevenBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">12:00 AM</li>
+        <li class="list-group-item col-6 change timeColumn" id="12">
+          <input
+            id="twelveIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="twelveBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">1:00 PM</li>
+        <li class="list-group-item col-6 change timeColumn" id="13">
+          <input
+            id="oneIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="oneBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">2:00 PM</li>
+        <li class="list-group-item col-6 change timeColumn" id="14">
+          <input
+            id="twoIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="twoBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">3:00 PM</li>
+        <li class="list-group-item col-6 change timeColumn" id="15">
+          <input
+            id="threeIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="threeBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">4:00 PM</li>
+        <li class="list-group-item col-6 change timeColumn" id="16">
+          <input
+            id="fourIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="fourBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item leftbox-border col-2">5:00 PM</li>
+        <li class="list-group-item col-6 change timeColumn" id="17">
+          <input
+            id="fiveIn"
+            type="text"
+            name="fname"
+            placeholder="Start Typing Here"
+          /><br />
+        </li>
+        <li class="list-group-item col-2 hi">
+          <button id="fiveBtn" class="saveBtn">
+            <svg
+              class="fit"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="55"
+              fill="currentColor"
+              class="bi bi-archive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
